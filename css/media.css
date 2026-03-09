@@ -1,0 +1,275 @@
+.burger-image-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2.5rem;
+}
+
+@media(min-width:501px) and (max-width:834px){
+    .burger-image-grid{
+        grid-template-columns:1fr 1fr 1fr;
+        gap:1.5rem;
+    }
+
+    .header-left{
+        gap:.8rem;
+    }
+
+    .container.pd-top-bt{
+        padding-inline:1em;
+        padding-top:5em;
+        padding-bottom:5em;
+    }
+
+    .logo-img{
+        visibility: visible;
+        display:inline-flex;
+        flex:0 1 38px;
+        width:100%;
+        height:auto;
+        max-width:38px;
+        object-fit:cover;
+        cursor:pointer;
+    }
+
+    .location-control{
+        gap:.16rem;
+        background:none;
+        border:none;
+        cursor:pointer;
+    }
+
+    .products-link{
+        display:inline-flex;
+        color:#fff;
+        font-size:1rem;
+        font-weight:600;
+        flex-wrap:wrap;
+        line-height:1.6;
+    }
+
+    .login,
+    .cart-text{
+        display:inline-flex;
+    }
+
+    .hero-content{
+        padding-top:5.5em;
+    }
+
+    .hero-supporting-text{
+        font-size:1.23rem;
+        max-width:450px;
+        line-height:1.5;
+    }
+
+    .cta-btn{
+        font-size:1.05rem;
+    }
+
+    .image-wrapper{
+        aspect-ratio:16/18;
+    }
+
+    .product-card{
+        width:100%;
+    }
+
+    .burger-info{
+        padding:.9em .3em;
+    }
+
+    .burger-price,
+    .burger-rating-num{
+        font-size:.88rem;
+    }
+
+    .rating-dflex{
+        white-space:wrap;
+        overflow:visible;
+        gap:.2rem;
+    }
+
+    .dflex{
+        justify-content:center;
+    }
+
+    .burger-add-btn{
+        white-space: nowrap;
+    }
+
+    .footer-brand-img{
+        display:block;
+        width:75px;
+        height:75px;
+    }
+
+    .footer-title{
+        display:block;
+        color:#fff;
+        text-align:center;
+        font-weight:500;
+        font-size:1.85rem;
+        margin:0;
+    }
+
+    .download-app{
+        display:flex;
+        justify-content:center;
+        gap:.99rem;
+        align-items:center;
+        padding-top:2em;
+    }
+
+    .google-play,
+    .app-store{
+        display:flex;
+        align-items:center;
+        gap:.4rem;
+        color:#fff;
+        border-radius:999px;
+        padding:1em 1.2em;
+        border:1px solid #fff;
+        font-size:1.15rem;
+        font-family:satoshi;
+    }
+
+    .footer-top-sect,
+    .footer-bottom-sect{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        margin-top:2em;
+    }
+
+    .footer-bottom-sect{
+        margin-top:0;
+    }
+
+    .footer-dflex{
+        margin-bottom:2em;
+    }
+
+    .footer-bottom{
+        display:flex;
+        flex-direction:row;
+        align-items:start;
+        margin-top:.7em;
+    }
+
+    .copyright{
+        margin-top:0;
+        max-width:450px;
+    }
+}
+
+@media(min-width:835px) {
+    .burger-image-grid{
+        grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+
+    .hero-title{
+        white-space:nowrap;
+    }
+
+    .hero-content{
+        padding-top:5.5em;
+    }
+
+    .logo-img{
+        visibility: visible;
+        display:inline-flex;
+        flex:0 1 38px;
+        width:100%;
+        height:auto;
+        max-width:38px;
+        object-fit:cover;
+        cursor:pointer;
+    }
+
+    .location-control{
+        gap:.16rem;
+        background:none;
+        border:none;
+        cursor:pointer;
+    }
+
+    .products-link{
+        display:inline-flex;
+        color:#fff;
+        font-size:1rem;
+        font-weight:600;
+        flex-wrap:wrap;
+        line-height:1.6;
+    }
+
+    .login,
+    .cart-text{
+        display:inline-flex;
+    }
+
+
+    .footer-brand-img{
+        display:block;
+        width:75px;
+        height:75px;
+    }
+
+    .footer-title{
+        display:block;
+        color:#fff;
+        text-align:center;
+        font-weight:500;
+        font-size:1.85rem;
+        margin:0;
+    }
+
+    .download-app{
+        display:flex;
+        justify-content:center;
+        gap:.99rem;
+        align-items:center;
+        padding-top:2em;
+    }
+
+    .google-play,
+    .app-store{
+        display:flex;
+        align-items:center;
+        gap:.4rem;
+        color:#fff;
+        border-radius:999px;
+        padding:1em 1.2em;
+        border:1px solid #fff;
+        font-size:1.15rem;
+        font-family:satoshi;
+    }
+
+    .footer-top-sect,
+    .footer-bottom-sect{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        margin-top:2em;
+    }
+
+    .footer-bottom-sect{
+        margin-top:0;
+    }
+
+    .footer-dflex{
+        margin-bottom:2em;
+    }
+
+    .footer-bottom{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:start;
+        margin-top:.7em;
+    }
+
+    .copyright{
+        margin-top:0;
+        max-width:450px;
+    }
+}

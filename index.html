@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Timothy korea">
+    <meta name="description" content="Frontend clone project of the Jazzy Burger website built with semantic HTML, modern CSS, and vanilla JavaScript for layout and UI recreation practice.">
+
+    <title>Jazzy's Burger: Clone</title>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGFkgwEBDUv/CSmC/wM3o/8FMZL/CDug/wU7m/8EKn//Axpg/wEROv8WGiz2g42sBwAAAAAAAAAAAAAAAFqj7f8/mev/U6Xx/22z9f9ts/b/V6Pv/z+X7f8fhOL/PI/l/yV92P8metL/QofW/y51yv8pZLv/AAAAAAAAAABVqPb/V6Lx/3229/92tPD/iMn7/3q98/9+uev/ZrLt/1aGwP8FL3P/LWWs/zVlov9nmcj/cJrO/5SaowMAAAAAKTt7/z9Vnv8iRpn/PEZ9/yMxdP8iNnb/ITZ4/yEmWv8PzP//Tdj//yo+gv8VLnr/Fyph/xEkXf8AAAAAKUWM6UBRoP85VKP/KT2E/y1Jl/9DYLL/ODt0/1pekv8Bv/z/MMj//xrG//8NH1b/R1aU/xY4jP8MInL/LEF/2QAAAAAVKU7/BhlV/y9Bhf8YLmP/Fx85/wkRKf8ET4z/CTZr/wwXOf8aJUj/FB1J/xodPf8CBhf/DGWi/255lyZZaJQ8NkmY/yIqfv8A2v//AnS9/0VTlP+Uo9r/U2eu/xIylf8mQ6T/T3TO/1Zwwv8iQJv/Ul+c/zlMiP9yd48BAAAAAGa/9/891v3/C7T4/wHL/v8Bxv//AN78/yjg/v8AdNP/P2x4/ww+Uf8JY4T/EyJG/wwOOv8TH1j/AAAAAAAAAABPisT/FCjO/zhV8P8fL/n/EyL3/wMM1v8RAGj/Exez/w4TmP8LD4P/EhmT/xQShP87Obb/DoGD/wAAAAAAAAAAGARZ/yIzXv8BCBD/AAAB/wiGgf8NADr/bzSY/wB0X/9AG2b/WyeC/1Ujd/9DPG//QzNa/wFPRP8AAAAAAAAAAAGRe/9mTXv/KBda/yIKZv8AQUD/A0sy/wBlS/8ARCz/AZqK/wCdg/8NsY3/AZ2M/wBqVf8mw7P/AIGB/wAAAABMvaL/AZaJ/wCOdv8BYFb/ACsq/wABAf8BcHH/A7ah/wABAf8BAQD/Aj47/wEDGP8Bh3L/x9juzQAAAAAAAAAAXbvx/6rd/f8GlY//AD19/wEVSv8ADQ3/AAYI/wAHC/8BNzj/AHNj/xA5XP88d6H/Laq4/53H8N4AAAAAAAAAAAAAAABnvP3/tNz9/6PX/f+Ey/7/c7/8/2+4+f98uPn/UqPx/zqP5/9gn+f/ZqPk/6DD8P8AAAAAAAAAAAAAAAAAAAAAnKfFT1Kp9/9Mrfv/Sqz6/z+j9v84nPP/NZbv/x2H6v8dfeH/Jn7h/y193/9pi8haAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc5TWpkqI5f87hOb/NoHi/zt83/9Gf9v/T4DV/22LyVgAAAAAAAAAAAAAAAAAAAAA4AcAAIABAACAAQAAgAEAAAAAAACAAQAAgAEAAIABAACAAQAAgAEAAIAAAACAAQAAgAEAAMADAADgBwAA8B8AAA==" rel="icon" type="image/x-icon">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <script type="module" defer src="js/app.js"></script>
+</head>
+
+<body>
+    
+    <section class="hero-section">
+    <header class="site-header" role="banner">
+            <div class="header-left">
+                <img src="assets/images/logo-light.webp" class="logo-img" alt="jazzy burger">
+                <button aria-label="choose location" class="location-control" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"><path fill="#fff" cursor="pointer" d="M15.465 6.338C14.678 2.873 11.655 1.313 9 1.313h-.007c-2.648 0-5.678 1.552-6.465 5.017-.878 3.87 1.492 7.147 3.637 9.21A4.08 4.08 0 0 0 9 16.688c1.02 0 2.04-.383 2.828-1.148 2.145-2.062 4.515-5.332 3.637-9.202M9 10.095a2.362 2.362 0 1 1 0-4.724 2.362 2.362 0 0 1 0 4.724"></path></svg>
+                    <span class="location">Lagos</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="Icon icon-chevron" style="cursor: pointer; width: 14px; height: 14px;"><path fill="#fff" d="M18.71 8.21a1 1 0 0 0-1.42 0l-4.58 4.58a1 1 0 0 1-1.42 0L6.71 8.21a1 1 0 1 0-1.42 1.41l4.59 4.59a3 3 0 0 0 4.24 0l4.59-4.59a1 1 0 0 0 0-1.41"></path></svg>
+                </button>
+
+                <ul aria-label="location select" class="top-site-locations">
+                    <li class="locations">
+                        <span class="locations-label">Abuja</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="red-mark-icon" style="cursor: pointer; width: 16px; height: 16px;"><path fill="red" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m4.78 7.7-5.67 5.67a.75.75 0 0 1-1.06 0l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0s.29.76 0 1.06"></path></svg>
+                    </li>
+                    <li class="locations">
+                        <span class="locations-label">Benin</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="red-mark-icon"  style="cursor: pointer; width: 16px; height: 16px;"><path fill="red" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m4.78 7.7-5.67 5.67a.75.75 0 0 1-1.06 0l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0s.29.76 0 1.06"></path></svg>
+                    </li>
+                    <li class="locations">
+                        <span class="locations-label">Lagos</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="red-mark-icon"  style="cursor: pointer; width: 16px; height: 16px;"><path fill="red" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m4.78 7.7-5.67 5.67a.75.75 0 0 1-1.06 0l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0s.29.76 0 1.06"></path></svg>
+                    </li>
+                    <li class="locations bottom-location">
+                        <span class="locations-label">PH</span>
+                        <span class="new-btn">NEW</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="red-mark-icon"  style="cursor: pointer; width: 16px; height: 16px;"><path fill="red" d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m4.78 7.7-5.67 5.67a.75.75 0 0 1-1.06 0l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0s.29.76 0 1.06"></path></svg>
+                    </li>
+                </ul>
+            </div>
+
+            <nav class="header-right" aria-label="primary">
+                <a href="allproducts.html" class="products-link">All products</a>
+                <a href="login.html" class="login-link" aria-label="login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><g fill="#1C1C1E"><path d="M10 1.667a3.96 3.96 0 0 0-3.958 3.958c0 2.142 1.675 3.875 3.858 3.95a.7.7 0 0 1 .183 0h.059000000000000004a3.95 3.95 0 0 0 3.816-3.95A3.96 3.96 0 0 0 10 1.667M14.267 11.163c-2.325-1.55-6.117-1.55-8.459 0-1.058.708-1.641 1.666-1.641 2.691S4.75 15.83 5.8 16.53c1.167.784 2.7 1.175 4.233 1.175 1.534 0 3.067-.392 4.234-1.175 1.05-.708 1.633-1.658 1.633-2.691-.008-1.025-.583-1.975-1.633-2.675"></path></g></svg>
+                    <span class="login">Login</span>
+                </a>
+                <a href="cart.html" class="cart-number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><g fill="#fff"><path d="M16.033 4.65H15.7l-2.817-2.817a.59.59 0 0 0-.825 0 .59.59 0 0 0 0 .825L14.05 4.65h-8.1l1.992-1.992a.59.59 0 0 0 0-.825.59.59 0 0 0-.825 0L4.308 4.65h-.333c-.75 0-2.308 0-2.308 2.133 0 .809.166 1.342.516 1.692.2.208.442.317.7.375.242.058.5.067.75.067h12.734c.258 0 .5-.017.733-.067.7-.167 1.233-.667 1.233-2.067 0-2.133-1.558-2.133-2.3-2.133M15.875 10H4.058a.832.832 0 0 0-.825.967l.7 4.283c.234 1.433.859 3.083 3.634 3.083h4.675c2.808 0 3.308-1.408 3.608-2.983l.842-4.358a.83.83 0 0 0-.817-.992M10 16.25a3.55 3.55 0 0 1-3.542-3.542.63.63 0 0 1 .625-.625.63.63 0 0 1 .625.625A2.29 2.29 0 0 0 10 15a2.29 2.29 0 0 0 2.292-2.292.63.63 0 0 1 .625-.625.63.63 0 0 1 .625.625A3.55 3.55 0 0 1 10 16.25"></path></g></svg>
+                    <span class="cart-text">Cart</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </nav>
+    </header>    
+
+        <div class="hero-content">
+                <a href="login.html" class="affiliate-link" aria-label="become an affiliate">
+                    <span class="badge">New</span>
+                    <span class="affiliate-link-text">Become an Affiliate 💸</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="right-arrow"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+
+                <h1 class="hero-title">The <span class="accent-text">Jazz</span> is in every bite</h1>
+                <p class="hero-supporting-text">Savor the flavor! Explore our delicious menu and order now for a taste sensation!</p>
+
+                <a href="#" class="cta-btn"  aria-label="download the jazzy burger app">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 26" class="Icon mobile-phone-icon" style="cursor: pointer; width: 14px; height: 14px;"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.6 7v12c0 4.8-1.2 6-6 6H8.4c-4.8 0-6-1.2-6-6V7c0-4.8 1.2-6 6-6h7.2c4.8 0 6 1.2 6 6M14.4 5.2H9.6"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21.52a1.86 1.86 0 1 0 0-3.72 1.86 1.86 0 0 0 0 3.72"></path></svg>
+
+                    <span class="cta-text">
+                        Download the Jazzy Burger App
+                    </span>
+                </a>
+        </div>
+    </section>
+
+
+    <main class="container">
+        <section class="burger-image-grid">
+        </section>
+        <div class="view-products-wrapper">
+            <a href="allproducts.html" class="view-products">
+                <img src="assets/icons/cart.svg" class="cart" alt="cart image">
+                <span class="products-link-text">View all products</span>   
+            </a>
+        </div>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container pd-top-bt">
+            <img src="assets/images/logo-light.webp" class="footer-brand-img" alt="brand name">
+            <h2 class="footer-title">The <span class="accent-text">Jazz</span> is in every bite</h2>
+            <nav aria-label="download app" class="download-app">
+                <a href="#" class="google-play">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="Icon-module-scss-module__4iVZmW__icon undefined undefined " style="cursor: pointer; width: 22.987px; height: 14px;"><path fill="#fff" fill-rule="evenodd" d="M16.056 6.601 5.335.384A2.7 2.7 0 0 0 3.948 0C2.914 0 2.003.62 1.556 1.489l.089.088 9.717 9.716zM1.264 2.611V21.39L10.655 12zm.292 19.9C2.004 23.382 2.914 24 3.948 24c.496 0 .962-.134 1.361-.37l.032-.018 10.732-6.195-4.71-4.71-9.718 9.716zM16.97 16.9l4.353-2.513a2.685 2.685 0 0 0 .017-4.72l-.01-.007-4.38-2.54L12.07 12z" clip-rule="evenodd"></path></svg>
+                    <span>Google Play</span>
+                </a>
+                <a href="#" class="app-store">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="Icon-module-scss-module__4iVZmW__icon undefined undefined " style="cursor: pointer; width: 22.987px; height: 14px;"><path fill="#fff" d="M18.705 12.763c.024-1.853 1.043-3.606 2.66-4.576-1.02-1.422-2.728-2.324-4.506-2.378-1.895-.194-3.733 1.107-4.7 1.107-.984 0-2.471-1.088-4.073-1.056C6 5.926 4.052 7.085 3.036 8.867c-2.183 3.69-.554 9.114 1.537 12.097 1.047 1.46 2.27 3.092 3.87 3.035 1.566-.064 2.15-.975 4.04-.975 1.873 0 2.422.974 4.054.938 1.68-.027 2.74-1.468 3.749-2.942A12 12 0 0 0 22 17.612c-1.975-.816-3.293-2.756-3.296-4.849M15.62 3.847A5.29 5.29 0 0 0 16.88 0a5.64 5.64 0 0 0-3.621 1.83 5.08 5.08 0 0 0-1.291 3.704c1.4.014 2.776-.621 3.654-1.687"></path></svg>
+                    <span>App Store</span>
+                </a>
+            </nav>
+
+            <nav aria-label="footer" class="footer-dflex">
+                <section class="footer-top-sect">
+                    <h3 class="section-text">Need Help?</h3>
+                    <ul class="section-links">
+                        <li class="support">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="Icon-module-scss-module__4iVZmW__icon undefined undefined " style="cursor: pointer; width: 20px; height: 20px;"><path fill="#fff" d="m18.47 16.83.39 3.16c.1.83-.79 1.41-1.5.98l-3.46-2.06c-.24-.14-.3-.44-.17-.68.5-.92.77-1.96.77-3 0-3.66-3.14-6.64-7-6.64-.79 0-1.56.12-2.28.36a.505.505 0 0 1-.64-.6C5.49 4.71 8.99 2 13.17 2 18.05 2 22 5.69 22 10.24c0 2.7-1.39 5.09-3.53 6.59"></path><path fill="#fff" d="M13 15.23c0 1.19-.44 2.29-1.18 3.16-.99 1.2-2.56 1.97-4.32 1.97l-2.61 1.55c-.44.27-1-.1-.94-.61l.25-1.97C2.86 18.4 2 16.91 2 15.23c0-1.76.94-3.31 2.38-4.23.89-.58 1.96-.91 3.12-.91 3.04 0 5.5 2.3 5.5 5.14"></path></svg>
+                            <span class="support-text">24/7 Support</span>
+                        </li>
+
+                        <li class="payment">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="Icon-module-scss-module__4iVZmW__icon undefined undefined " style="cursor: pointer; width: 20px; height: 20px;"><path fill="#fff" d="M2 11.46v5c0 2.29 1.85 4.14 4.14 4.14h11.71c2.29 0 4.15-1.86 4.15-4.15v-4.99c0-.67-.54-1.21-1.21-1.21H3.21c-.67 0-1.21.54-1.21 1.21m6 5.79H6c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h2c.41 0 .75.34.75.75s-.34.75-.75.75m6.5 0h-4c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75M13.5 4.61v2.93c0 .67-.54 1.21-1.21 1.21H3.21C2.53 8.75 2 8.19 2 7.52c.01-1.13.46-2.16 1.21-2.91S5 3.4 6.14 3.4h6.15c.67 0 1.21.54 1.21 1.21M19.97 2h-2.94C15.76 2 15 2.76 15 4.03v2.94C15 8.24 15.76 9 17.03 9h2.94C21.24 9 22 8.24 22 6.97V4.03C22 2.76 21.24 2 19.97 2m.66 2.45-2.37 2.77a.5.5 0 0 1-.37.18h-.02c-.14 0-.27-.05-.37-.15l-1.1-1.08a.52.52 0 0 1 0-.73c.2-.2.53-.21.73 0l.7.69 2-2.34c.19-.22.51-.24.73-.06.23.18.25.51.07.72"></path></svg>
+                            <span class="payment-text">100% Payment Secured</span>
+                        </li>
+                    </ul>
+                </section>
+
+
+                <section class="footer-bottom-sect">
+                    <nav class="contact-links" aria-label="contact">
+                        <a href="#" class="call-line">+234 907 466 6655</a>
+                        <a href="#" class="help-url">help@jazzysburger.com</a>
+                    </nav>
+
+                    <ul class="social-links">
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="Icon-module-scss-module__4iVZmW__icon undefined undefined " style="cursor: pointer; width: 24px; height: 24px;"><path fill="#fff" d="M21.057 7.18c.01.212.01.414.01.625.009 6.403-4.696 13.795-13.3 13.795-2.537 0-5.028-.758-7.167-2.18a9.174 9.174 0 0 0 6.918-2.016c-2-.038-3.76-1.391-4.371-3.369a4.37 4.37 0 0 0 2.111-.086c-2.176-.442-3.741-2.429-3.75-4.743V9.15c.648.374 1.38.585 2.12.605C1.582 8.333.943 5.5 2.184 3.284c2.38 3.033 5.88 4.866 9.64 5.068a4.98 4.98 0 0 1 1.352-4.637c1.88-1.833 4.844-1.737 6.622.211a9.1 9.1 0 0 0 2.972-1.18 4.86 4.86 0 0 1-2.055 2.678 9.4 9.4 0 0 0 2.685-.758 9.8 9.8 0 0 1-2.343 2.515"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="Icon-module-scss-module__4iVZmW__icon undefined undefined " style="cursor: pointer; width: 24px; height: 24px;"><path fill="#fff" d="m17.214 13.328.622-4.095h-3.89V6.577c0-1.12.542-2.214 2.284-2.214H18V.877S16.395.6 14.86.6c-3.205 0-5.298 1.962-5.298 5.512v3.121H6v4.095h3.562v9.9q1.073.172 2.191.172 1.12 0 2.192-.172v-9.9z"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="Icon-module-scss-module__4iVZmW__icon undefined undefined " style="cursor: pointer; width: 24px; height: 24px;"><path fill="#fff" d="M23.933 7.052c-.058-1.278-.264-2.152-.557-2.916a5.85 5.85 0 0 0-1.383-2.123A5.9 5.9 0 0 0 19.871.629c-.763-.298-1.637-.5-2.914-.557C15.675.014 15.267 0 12.012 0c-3.26 0-3.668.014-4.945.072S4.917.336 4.153.63a5.8 5.8 0 0 0-2.127 1.384A5.9 5.9 0 0 0 .644 4.136C.35 4.9.144 5.774.087 7.052.029 8.335.015 8.743.015 12c0 3.262.014 3.67.072 4.948S.35 19.1.644 19.864a5.85 5.85 0 0 0 1.382 2.123 5.8 5.8 0 0 0 2.122 1.384c.764.298 1.637.5 2.914.557 1.282.058 1.69.072 4.945.072 3.26 0 3.668-.014 4.945-.072s2.151-.264 2.915-.557a5.85 5.85 0 0 0 2.122-1.384 5.9 5.9 0 0 0 1.382-2.123c.298-.764.5-1.638.557-2.916.058-1.283.072-1.691.072-4.948s-.01-3.67-.067-4.948m-2.156 9.8c-.052 1.172-.25 1.81-.413 2.229-.216.557-.48.96-.902 1.383s-.821.678-1.383.904c-.422.163-1.06.36-2.227.413-1.263.057-1.642.072-4.85.072-3.206 0-3.586-.015-4.848-.072-1.172-.053-1.81-.25-2.228-.413a3.7 3.7 0 0 1-1.383-.904 3.8 3.8 0 0 1-.902-1.383c-.163-.423-.36-1.062-.413-2.23C2.17 15.59 2.156 15.21 2.156 12s.014-3.588.072-4.852c.053-1.172.25-1.81.413-2.229.216-.557.48-.96.902-1.383a3.8 3.8 0 0 1 1.383-.903c.423-.164 1.061-.36 2.228-.414 1.262-.057 1.642-.072 4.849-.072s3.586.015 4.849.072c1.171.053 1.81.25 2.227.414.557.216.96.48 1.383.903.422.422.677.821.902 1.383.164.423.36 1.062.413 2.23.058 1.263.072 1.642.072 4.851s-.019 3.589-.072 4.852"></path><path fill="#fff" d="M12.003 5.832A6.164 6.164 0 0 0 5.838 12a6.164 6.164 0 1 0 12.33 0 6.16 6.16 0 0 0-6.165-6.168m0 10.17a4 4 0 0 1-4-4.002 4 4 0 0 1 4-4.002A4 4 0 0 1 16.002 12a4 4 0 0 1-4 4.002M18.407 7.033a1.44 1.44 0 1 0 0-2.882 1.44 1.44 0 0 0 0 2.882"></path><path fill="#fff" d="M0 12c0 3.262.014 3.67.072 4.948s.264 2.152.557 2.916a5.85 5.85 0 0 0 1.383 2.123 5.85 5.85 0 0 0 2.122 1.384c.763.298 1.637.5 2.914.557 1.282.058 1.69.072 4.945.072 3.26 0 3.668-.014 4.945-.072s2.15-.264 2.914-.557a5.85 5.85 0 0 0 2.122-1.384 5.85 5.85 0 0 0 1.383-2.123c.297-.764.499-1.638.557-2.916.057-1.283.072-1.691.072-4.948 0-3.262-.015-3.67-.072-4.948-.058-1.278-.265-2.152-.557-2.916a5.85 5.85 0 0 0-1.383-2.123A5.7 5.7 0 0 0 19.857.629c-.764-.298-1.637-.5-2.914-.557C15.66.014 15.253 0 11.998 0 8.738 0 8.33.014 7.053.072S4.902.336 4.138.63a5.85 5.85 0 0 0-2.122 1.384A5.9 5.9 0 0 0 .634 4.136C.336 4.9.13 5.774.072 7.052S0 8.738 0 12m2.165 0c0-3.204.015-3.588.072-4.852.053-1.172.25-1.81.413-2.229.216-.557.48-.96.903-1.383a3.8 3.8 0 0 1 1.382-.903c.423-.164 1.061-.36 2.228-.414 1.263-.057 1.642-.072 4.849-.072s3.586.015 4.849.072c1.171.053 1.81.25 2.228.414.556.216.96.48 1.382.903.423.422.677.821.903 1.383.163.423.36 1.062.413 2.23.057 1.263.072 1.642.072 4.851s-.015 3.589-.072 4.852c-.053 1.172-.25 1.81-.413 2.229a3.74 3.74 0 0 1-.903 1.383 3.8 3.8 0 0 1-1.382.904c-.423.163-1.061.36-2.228.413-1.263.057-1.642.072-4.849.072s-3.586-.015-4.849-.072c-1.171-.053-1.81-.25-2.228-.413a3.7 3.7 0 0 1-1.382-.904 3.8 3.8 0 0 1-.903-1.383c-.163-.423-.36-1.062-.413-2.23-.062-1.262-.072-1.647-.072-4.851"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="000" viewBox="0 0 24 24" class="Icon-module-scss-module__4iVZmW__icon Footer-module-scss-module__rJtC3W__youtube undefined " style="cursor: pointer; width: 24px; height: 24px;"><path fill="#fff" d="M23.506 6.23a3.01 3.01 0 0 0-2.116-2.116C19.512 3.6 12 3.6 12 3.6s-7.512 0-9.39.494A3.07 3.07 0 0 0 .494 6.23C0 8.107 0 12.002 0 12.002s0 3.914.494 5.773A3.01 3.01 0 0 0 2.61 19.89c1.897.514 9.39.514 9.39.514s7.512 0 9.39-.494a3.01 3.01 0 0 0 2.116-2.116C24 15.916 24 12.022 24 12.022s.02-3.915-.494-5.793"></path><path d="m9.608 15.6 6.247-3.598-6.247-3.598z"></path></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+
+            <hr class="section-divider">
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 <a href="#">Timothy Korea</a> • UI Clone for educational purposes only. Not affiliated with the original platform.</p>
+                <ul class="legal">
+                    <li class="privacy">
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="terms">
+                        <a href="#">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

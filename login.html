@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Timothy korea">
+    <meta name="description" content="Frontend clone project of the Jazzy Burger website built with semantic HTML, modern CSS, and vanilla JavaScript for layout and UI recreation practice.">
+
+    <title>Jazzy's Burger: Clone</title>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGFkgwEBDUv/CSmC/wM3o/8FMZL/CDug/wU7m/8EKn//Axpg/wEROv8WGiz2g42sBwAAAAAAAAAAAAAAAFqj7f8/mev/U6Xx/22z9f9ts/b/V6Pv/z+X7f8fhOL/PI/l/yV92P8metL/QofW/y51yv8pZLv/AAAAAAAAAABVqPb/V6Lx/3229/92tPD/iMn7/3q98/9+uev/ZrLt/1aGwP8FL3P/LWWs/zVlov9nmcj/cJrO/5SaowMAAAAAKTt7/z9Vnv8iRpn/PEZ9/yMxdP8iNnb/ITZ4/yEmWv8PzP//Tdj//yo+gv8VLnr/Fyph/xEkXf8AAAAAKUWM6UBRoP85VKP/KT2E/y1Jl/9DYLL/ODt0/1pekv8Bv/z/MMj//xrG//8NH1b/R1aU/xY4jP8MInL/LEF/2QAAAAAVKU7/BhlV/y9Bhf8YLmP/Fx85/wkRKf8ET4z/CTZr/wwXOf8aJUj/FB1J/xodPf8CBhf/DGWi/255lyZZaJQ8NkmY/yIqfv8A2v//AnS9/0VTlP+Uo9r/U2eu/xIylf8mQ6T/T3TO/1Zwwv8iQJv/Ul+c/zlMiP9yd48BAAAAAGa/9/891v3/C7T4/wHL/v8Bxv//AN78/yjg/v8AdNP/P2x4/ww+Uf8JY4T/EyJG/wwOOv8TH1j/AAAAAAAAAABPisT/FCjO/zhV8P8fL/n/EyL3/wMM1v8RAGj/Exez/w4TmP8LD4P/EhmT/xQShP87Obb/DoGD/wAAAAAAAAAAGARZ/yIzXv8BCBD/AAAB/wiGgf8NADr/bzSY/wB0X/9AG2b/WyeC/1Ujd/9DPG//QzNa/wFPRP8AAAAAAAAAAAGRe/9mTXv/KBda/yIKZv8AQUD/A0sy/wBlS/8ARCz/AZqK/wCdg/8NsY3/AZ2M/wBqVf8mw7P/AIGB/wAAAABMvaL/AZaJ/wCOdv8BYFb/ACsq/wABAf8BcHH/A7ah/wABAf8BAQD/Aj47/wEDGP8Bh3L/x9juzQAAAAAAAAAAXbvx/6rd/f8GlY//AD19/wEVSv8ADQ3/AAYI/wAHC/8BNzj/AHNj/xA5XP88d6H/Laq4/53H8N4AAAAAAAAAAAAAAABnvP3/tNz9/6PX/f+Ey/7/c7/8/2+4+f98uPn/UqPx/zqP5/9gn+f/ZqPk/6DD8P8AAAAAAAAAAAAAAAAAAAAAnKfFT1Kp9/9Mrfv/Sqz6/z+j9v84nPP/NZbv/x2H6v8dfeH/Jn7h/y193/9pi8haAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc5TWpkqI5f87hOb/NoHi/zt83/9Gf9v/T4DV/22LyVgAAAAAAAAAAAAAAAAAAAAA4AcAAIABAACAAQAAgAEAAAAAAACAAQAAgAEAAIABAACAAQAAgAEAAIAAAACAAQAAgAEAAMADAADgBwAA8B8AAA==" rel="icon" type="image/x-icon">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/login-media.css">
+
+    <script defer src="./js/login.js"></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="assets/images/logo-light.webp" alt="brand image" class="light-brand-img">
+        <div class="auth-img-container">
+            <img src="assets/images/auth-bg-img.jpg" alt="authentication image" class="auth-img">
+        </div>
+
+        <form class="auth-form">
+            <div class="auth-header">
+                <img src="assets/images/logo-dark.webp" alt="logo brand image" class="brand-img">
+                <h1 class="auth-title">Log In</h1>
+                <p class="auth-supporting-text">Welcome back! Please enter your details</p>
+            </div>
+
+            <div>
+            <div class="form-group mg-bt">
+                <label for="user-email" class="email-label">Email Address <span class="red-asterisk" aria-hidden="true">*</span></label>
+                <input type="email" placeholder="Enter your email" id="user-email" name="user_email" class="email-input" required>
+            </div>
+
+            <div class="form-group little-mg-bt">
+                <label for="user-password" class="password-label">Password <span class="red-asterisk" aria-hidden="true">*</span></label>
+                <div class="input-dflex">
+                <input type="password" placeholder="Password" id="user-password" name="user_password" class="password-input" required>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="password-icon" style="cursor: pointer; width: 16px; height: 16px;"><g clip-path="url(#Eye0Cross_svg__a)"><path fill="#000" d="M23.267 9.408a15.9 15.9 0 0 0-3.37-3.908l2.799-2.799a1 1 0 0 0-1.414-1.413L18.24 4.335A12.05 12.05 0 0 0 12 2.646c-6.189 0-9.715 4.237-11.267 6.762a4.91 4.91 0 0 0 0 5.16 15.9 15.9 0 0 0 3.37 3.907l-2.799 2.8a1 1 0 1 0 1.413 1.413l3.051-3.051A12.05 12.05 0 0 0 12 21.329c6.189 0 9.715-4.236 11.267-6.761a4.91 4.91 0 0 0 0-5.16m-17.265 2.58a5.988 5.988 0 0 1 9.468-4.884l-1.452 1.452A3.95 3.95 0 0 0 12 7.989a4 4 0 0 0-3.998 3.999c.003.711.199 1.409.566 2.018l-1.451 1.451a5.96 5.96 0 0 1-1.115-3.47M12 17.985a5.96 5.96 0 0 1-3.47-1.114l1.452-1.452c.61.368 1.307.564 2.018.567a4 4 0 0 0 3.999-3.998 3.94 3.94 0 0 0-.567-2.019l1.451-1.451A5.988 5.988 0 0 1 12 17.985"></path></g><defs><clipPath id="Eye0Cross_svg__a"><path fill="#fff" d="M0 0h24v24H0z"></path></clipPath></defs></svg>
+                </div>
+            </div>
+
+            <a href="#" class="forgot-password">Forgot your password?</a>
+            </div>
+        
+            <button type="submit" class="login-btn">Log In</button>
+
+            <p class="sign-up-text other-pixel">   
+                Not a member yet?
+                <a href="#" class="create-acct">Create an account</a>
+            </p> 
+        </form>
+
+        <p class="sign-up-text">   
+            Not a member yet?
+            <a href="#" class="create-acct">Create an account</a>
+        </p> 
+    </div>
+</body>

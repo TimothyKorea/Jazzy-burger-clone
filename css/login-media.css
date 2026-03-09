@@ -1,0 +1,100 @@
+@media(min-width:431px){
+    .login-container{
+        position:relative;
+        background-image:url(../assets/images/auth-bg-img.jpg);
+        background-position:center;
+        background-size:cover;
+        width:100%;
+        height:100vh;
+    }
+
+    .light-brand-img{
+        display:block;
+        width:100px;
+        height:100px;
+        position:absolute;
+        top:61px;
+        left:60px;
+    }
+
+    .auth-form{
+        position:absolute;
+        z-index:1;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        gap:1.9rem;
+    }
+
+    .sign-up-text,
+    .brand-img{
+        display:none;
+    }
+
+    .auth-form{
+        background-color:#fff;
+        padding:2em;
+        border-radius:10px;
+        width:80%;
+    }
+
+    .sign-up-text.other-pixel{
+        display:block;
+        text-align:center;
+        line-height:1.5;
+        margin:0;
+        color:rgb(99, 115, 129);
+    }
+
+    .login-btn{
+        margin-bottom:0;
+    }
+}
+
+
+@media(min-width:769px){
+    .login-container{
+        position:static;
+        background-image:none;
+        display:flex;
+        align-items:center;
+        margin:0 auto;
+        gap:2rem;
+        max-width:1200px;
+    }
+
+    .auth-img-container {
+        flex: 1 0 auto;
+        display:flex; 
+        position:relative;               
+    }
+
+    .auth-img {
+        display: block;            
+        width: 100%;    
+        height: clamp(480px, 60vh, 720px);          
+        object-fit: cover;
+        border-radius: 20px;
+        max-width:600px;
+    }
+
+    .auth-img-container::before{
+        content:"";
+        background-image:url(../assets/images/logo-light.webp);
+        height:90px;
+        position:absolute;
+        top:40px;
+        left:40px;
+        width:90px;
+        background-size:cover;
+        background-position:center;
+    }
+
+    .auth-form{
+        position:static;
+        transform:none;
+        flex:0 1 520px;
+        min-width:420px;
+        max-width:520px;
+    } 
+}
