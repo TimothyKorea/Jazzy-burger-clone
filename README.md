@@ -40,3 +40,12 @@ This project demonstrates how a menu-driven website can dynamically display prod
 **Timothy Korea**
 
 Frontend developer focused on building clean, structured, and responsive web interfaces while continuously improving development skills.
+
+
+## Preview
+
+![Project Screenshot](./assets/images/readme-img.png)
+
+## Live Demo
+
+[View Live Project](https://timothykorea.github.io/Jazzy-burger-clone/)
